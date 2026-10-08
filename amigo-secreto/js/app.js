@@ -19,7 +19,16 @@ function adicionar() {
 }
 
 function sortear() {
-  // TODO validar escolher e exibir
+    if (amigos.length < 2) {
+        alert('É necessário ter pelo menos dois participantes.');
+        return;
+    }
+
+    const indice = Math.floor(Math.random() * amigos.length);
+    const escolhido = amigos[indice];
+
+    const resultado = document.getElementById('lista-sorteio');
+    resultado.textContent = escolhido;
 }
 
 function reiniciar(evento) {
