@@ -28,9 +28,13 @@ function sortear() {
     const escolhido = amigos[indice];
 
     const resultado = document.getElementById('lista-sorteio');
-    resultado.textContent = escolhido;
-}
 
+    if (resultado.textContent === '') {
+        resultado.textContent = '🎉 O amigo sorteado é:\n' + escolhido;
+    } else {
+        resultado.textContent += ', ' + escolhido;
+    }
+}
 function reiniciar(evento) {
     evento.preventDefault();
 
