@@ -32,5 +32,17 @@ function sortear() {
 }
 
 function reiniciar(evento) {
-  // TODO impedir a navegação e restaurar o estado
+    evento.preventDefault();
+
+    amigos.length = 0;
+
+    const campo = document.getElementById('nome-amigo');
+    const lista = document.getElementById('lista-amigos');
+    const resultado = document.getElementById('lista-sorteio');
+
+    campo.value = '';
+    lista.textContent = '';
+    resultado.textContent = '';
+
+    campo.focus();
 }
